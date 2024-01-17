@@ -64,3 +64,7 @@ def draw():
                         (i * dif, 500), thick)
         
 def draw_val(val):
+    text1 = font1.render(str(val), 1, (0, 0, 0))
+    screen.blit(text1, (x * dif + 15, y * dif + 15))
+
+def raise_error_1():
