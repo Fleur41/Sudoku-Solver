@@ -72,3 +72,7 @@ def raise_error_1():
     screen.blit(text1, (20, 570))
 
 def raise_error_2():
+    text1 = font1.render('Wrong !!! Not a valid Key', 1, (0, 0, 0))
+    screen.blit(text1, (20, 570))
+
+def valid(m, i, j, val):
