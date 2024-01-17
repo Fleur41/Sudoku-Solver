@@ -68,3 +68,7 @@ def draw_val(val):
     screen.blit(text1, (x * dif + 15, y * dif + 15))
 
 def raise_error_1():
+    text1 = font1.render('WRONG !!!', 1, (0, 0, 0))
+    screen.blit(text1, (20, 570))
+
+def raise_error_2():
