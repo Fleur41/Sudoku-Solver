@@ -34,4 +34,33 @@ grid = [
 ]
 
 def get_coord(pos):
-    x = pos[0] // diff
+    x = pos[0] //dif
+    y = pos[1] //dif
+
+def draw_box():
+    for i in range(2):
+        pygame.draw.line(screen, (255, 0, 0), (x * dif-3, (y + i)
+                        * dif), (x * dif + dif + 3, (y + i)*dif), 7)
+        pygame.draw.line(screen, (255, 0, 0), ((x + i) * dif,
+                        y * dif), ((x + i) * dif, y * dif + dif), 7)
+
+def draw():
+    for i in range(9):
+        for j in range(9):
+            if grid[i][j] != 0:
+                pygame.draw.rect(screen, (0, 153, 153),
+                                (i * dif, j * dif, dif + 1, dif + 1))
+                text1 = font1.render(str(grid[i][j]), 1, (0, 0, 0))
+                screen.blit(text1, (i * dif + 15, j * dif + 15))
+
+    for i in range(10):
+        if i % 3 == 0:
+            thick = 7
+        else:
+            thick = 1
+        pygame.draw.line(screen, (0, 0, 0), (0, i * dif),
+                        (500, i * dif), thick)
+        pygame.draw.line(screen, (0, 0, 0), (i * dif, 0),
+                        (i * dif, 500), thick)
+        
+def draw_val(val):
